@@ -14,8 +14,73 @@ const dataDir = path.join(__dirname, '../data');
 if (!fs.existsSync(dataDir)) {
   fs.mkdirSync(dataDir, { recursive: true });
 }
+// This should already be in your authController.js
+exports.register = async (req, res) => {
+  try {
+    const { name, email, password } = req.body;
 
-// Load users from file or initialize with defaults
+    console.log('📝 Registration attempt:', { name, email });
+
+    // Check if user already exists
+    const existingUser = users.find(u => u.email.toLowerCase() === email.toLowerCase());
+    if (existingUser) {
+      return res.status(400).json({ 
+        success: false,
+        message: 'User with this email already exists' 
+      });
+    }
+
+    // Hash password
+    const salt = await bcrypt.genSalt(10);
+    const hashedPassword = await bcrypt.hash(password, salt);
+
+    // Create new user
+    const newUser = {
+      id: uuidv4(),
+      name: name || email.split('@')[0],
+      email: email,
+      password: hashedPassword,
+      role: 'patient',
+      isVerified: true,
+      createdAt: new Date().toISOString()
+    };
+
+    users.push(newUser);
+    saveUsers();
+
+    // Generate JWT token
+    const token = jwt.sign(
+      { 
+        id: newUser.id, 
+        email: newUser.email, 
+        role: 'patient',
+        name: newUser.name
+      },
+      process.env.JWT_SECRET || 'dev-secret-key',
+      { expiresIn: '7d' }
+    );
+
+    res.status(201).json({
+      success: true,
+      message: 'Account created successfully',
+      token,
+      user: {
+        id: newUser.id,
+        name: newUser.name,
+        email: newUser.email,
+        role: 'patient',
+        isVerified: true
+      }
+    });
+
+  } catch (error) {
+    console.error('❌ Registration error:', error);
+    res.status(500).json({ 
+      success: false,
+      message: 'Server error during registration' 
+    });
+  }
+};// Load users from file or initialize with defaults
 let users = [];
 try {
   if (fs.existsSync(USERS_FILE)) {

@@ -61,5 +61,32 @@
     "role": "patient",
     "isVerified": true,
     "createdAt": "2026-03-10T18:51:40.603Z"
+  },
+  {
+    "id": "1d88bc6a-3f65-40e0-ba78-6706df53572f",
+    "name": "subhi",
+    "email": "syyh46618@gmail.com",
+    "password": "Pass123",
+    "role": "patient",
+    "isVerified": true,
+    "createdAt": "2026-03-10T19:08:52.213Z"
+  },
+  {
+    "id": "ff5d0f84-a1e1-4fcb-a621-44bccba62967",
+    "name": "nethra",
+    "email": "niranjanaramesh6717@gmail.com",
+    "password": "Nethra123",
+    "role": "patient",
+    "isVerified": true,
+    "createdAt": "2026-03-10T19:09:51.498Z"
+  },
+  {
+    "id": "d320c3a5-a16d-4692-96f6-2b0d26b2d112",
+    "name": "nethra",
+    "email": "kiruthigha234@gmail.com",
+    "password": "Pass123456",
+    "role": "patient",
+    "isVerified": true,
+    "createdAt": "2026-03-10T19:35:30.576Z"
   }
 ]
