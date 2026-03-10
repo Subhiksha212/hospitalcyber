@@ -1,0 +1,65 @@
+[
+  {
+    "id": "admin123",
+    "name": "Admin User",
+    "email": "admin@securemed.com",
+    "password": "admin123",
+    "role": "admin",
+    "isVerified": true,
+    "createdAt": "2026-03-10T16:56:46.744Z"
+  },
+  {
+    "id": "patient123",
+    "name": "Patient",
+    "email": "patient@test.com",
+    "password": "$2a$10$wfIB/47m7Ne3wY4fUa8Zxec1k.3cwxL3AMHvOQqOfpz8a/8ePKgjm",
+    "role": "patient",
+    "isVerified": true,
+    "createdAt": "2026-03-10T18:51:40.433Z"
+  },
+  {
+    "id": "68e55dd9-5c92-4b24-95aa-de17cf42e0f4",
+    "name": "Subhiksha",
+    "email": "subhiksha278@gmail.com",
+    "password": "$2a$10$E9e5.P4NT1puQMf95hg2ceilCOmCkJiOINOrEqdr9K3oaEZS36Au6",
+    "role": "patient",
+    "isVerified": true,
+    "createdAt": "2026-03-10T18:51:40.156Z"
+  },
+  {
+    "id": "9c14b26d-ef74-4187-8734-4fb50bfd7672",
+    "name": "Kishor",
+    "email": "kishor123@gmail.com",
+    "password": "$2a$10$6j/ZlY4Cz5SiOW4Y4Ej/ieMqyIutLbmBtCD3Z.YRraBgCtQVge9A.",
+    "role": "patient",
+    "isVerified": true,
+    "createdAt": "2026-03-10T18:51:40.260Z"
+  },
+  {
+    "id": "a79d38fd-c142-4417-9f13-917e89273088",
+    "name": "Test User",
+    "email": "test@example.com",
+    "password": "$2a$10$j7rAzQBUq.pcmn15qx53xuUgxK0m/HjQrEFW1.d.x0gtswEMcfwQO",
+    "role": "patient",
+    "isVerified": true,
+    "createdAt": "2026-03-10T18:51:40.339Z"
+  },
+  {
+    "id": "7150bf41-add8-4320-b83d-f6a5f697fbbc",
+    "name": "John Doe",
+    "email": "john@example.com",
+    "password": "$2a$10$V1FygTN0FdWStudhH81s7.w1W5WTo/5RTiP7v5A4Cm4177ami683K",
+    "role": "patient",
+    "isVerified": true,
+    "createdAt": "2026-03-10T18:51:40.520Z"
+  },
+  {
+    "id": "ccfc6133-1af9-486e-a3d1-9c301f9a97b9",
+    "name": "Jane Smith",
+    "email": "jane@example.com",
+    "password": "$2a$10$QTiRBwwlGHsSBza50ii/kOIJ9Ldy/CIT4C7aiQrLxzJ8PcdfSd9cm",
+    "role": "patient",
+    "isVerified": true,
+    "createdAt": "2026-03-10T18:51:40.603Z"
+  }
+]
